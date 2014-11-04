@@ -57,6 +57,7 @@ class yii2slidebars extends \yii\base\Widget
         if($this->sbLeft)
         {
             echo Html::beginTag('div', ['class' => 'sb-slidebar sb-left']) . "\n";
+                echo 
             echo Html::endTag('div') . "\n";
         }
 
@@ -83,7 +84,7 @@ class yii2slidebars extends \yii\base\Widget
         
         $js = [];
         //$options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
-        $js[] = "$.slidebars();";
+        $js[] = "var mySlidebars$id = new $.slidebars();";
         
         $view->registerJs(implode("\n", $js),\yii\web\View::POS_READY);
     }
