@@ -54,16 +54,32 @@ class yii2slidebars extends \yii\base\Widget
      */
     public function run()
     {
+        $view = $this->getView();
         if($this->sbLeft)
         {
             echo Html::beginTag('div', ['class' => 'sb-slidebar sb-left']) . "\n";
-                echo 
+                if (isset($view->blocks['sb-left']))
+
+                    $view->blocks['sb-left'];
+                }
+                else
+                {
+                    echo ' ';
+                }
             echo Html::endTag('div') . "\n";
         }
 
         if($this->sbRight)
         {
             echo Html::beginTag('div', ['class' => 'sb-slidebar sb-right']) . "\n";
+                if (isset($view->blocks['sb-right']))
+
+                    $view->blocks['sb-right'];
+                }
+                else
+                {
+                    echo ' ';
+                }
             echo Html::endTag('div') . "\n";
         }
 
