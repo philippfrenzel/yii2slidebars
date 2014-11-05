@@ -60,7 +60,7 @@ class yii2slidebars extends \yii\base\Widget
             echo Html::beginTag('div', ['class' => 'sb-slidebar sb-left']) . "\n";
                 if (isset($view->blocks['sb-left']))
                 {
-                    $view->blocks['sb-left'];
+                    echo $view->blocks['sb-left'];
                 }
                 else
                 {
@@ -74,7 +74,7 @@ class yii2slidebars extends \yii\base\Widget
             echo Html::beginTag('div', ['class' => 'sb-slidebar sb-right']) . "\n";
                 if (isset($view->blocks['sb-right']))
                 {
-                    $view->blocks['sb-right'];
+                    echo $view->blocks['sb-right'];
                 }
                 else
                 {
