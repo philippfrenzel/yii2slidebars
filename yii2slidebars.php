@@ -37,6 +37,12 @@ class yii2slidebars extends \yii\base\Widget
     public $sbRight = false;
 
     /**
+     * initial options for the plugin, pls see docs for more details http://http://plugins.adchsm.me/slidebars/usage.php
+     * @var [type]
+     */
+    public $clientOptions = [];
+
+    /**
      * Initializes the widget.
      * If you override this method, make sure you call the parent implementation first.
      */
@@ -99,8 +105,8 @@ class yii2slidebars extends \yii\base\Widget
         slidebarsAsset::register($view);
         
         $js = [];
-        //$options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
-        $js[] = "var mySlidebars$id = new $.slidebars();";
+        $options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
+        $js[] = "var mySlidebars$id = new $.slidebars($options);";
         
         $view->registerJs(implode("\n", $js),\yii\web\View::POS_READY);
     }
