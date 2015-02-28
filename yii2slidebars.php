@@ -37,6 +37,18 @@ class yii2slidebars extends \yii\base\Widget
     public $sbRight = false;
 
     /**
+     * $sbStatic Unfixes the Slidebar so it scrolls naturally with the site. Introduced in version 0.8
+     * @var boolean
+     */
+    public $sbStatic = false;
+
+    /**
+     * $sbPush Slidebar is located off-canvas and pushes the site across when opened. Introduced in version 0.9
+     * @var boolean
+     */
+    public $sbStylePush = true;
+
+    /**
      * initial options for the plugin, pls see docs for more details http://http://plugins.adchsm.me/slidebars/usage.php
      * @var [type]
      */
@@ -61,9 +73,26 @@ class yii2slidebars extends \yii\base\Widget
     public function run()
     {
         $view = $this->getView();
+        $CssClass = NULL;
+        
         if($this->sbLeft)
         {
-            echo Html::beginTag('div', ['class' => 'sb-slidebar sb-left']) . "\n";
+            $CssClass = 'sb-slidebar sb-left';
+            
+            if($this->sbStatic)
+            {
+                $CssClass .= ' sb-static';
+            }
+            if($this->sbStylePush)
+            {
+                $CssClass .= ' sb-style-push';                
+            }
+            else
+            {
+                $CssClass .= ' sb-style-overlay';
+            }
+
+            echo Html::beginTag('div', ['class' => $CssClass]) . "\n";
                 if (isset($view->blocks['sb-left']))
                 {
                     echo $view->blocks['sb-left'];
@@ -73,7 +102,22 @@ class yii2slidebars extends \yii\base\Widget
 
         if($this->sbRight)
         {
-            echo Html::beginTag('div', ['class' => 'sb-slidebar sb-right']) . "\n";
+            $CssClass = 'sb-slidebar sb-right';
+            
+            if($this->sbStatic)
+            {
+                $CssClass .= ' sb-static';
+            }
+            if($this->sbStylePush)
+            {
+                $CssClass .= ' sb-style-push';                
+            }
+            else
+            {
+                $CssClass .= ' sb-style-overlay';
+            }
+
+            echo Html::beginTag('div', ['class' => $CssClass]) . "\n";
                 if (isset($view->blocks['sb-right']))
                 {
                     echo $view->blocks['sb-right'];

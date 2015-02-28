@@ -36,6 +36,21 @@ These are the basic steps in order to get Slidebars working on your site. There 
  + Set the side of your Slidebars by adding modifier classes.
  + Add control classes to elements to use the Slidebars.
 
+## Add Control Classes
+There are optional classes which when applied to elements, can be used control the Slidebars. If you do not wish to use these, you can set your own elements to control the Slidebars using the API.
+
+.sb-toggle-left can be used to toggle the left Slidebar. If clicked when the Slidebar is closed, it will open, if clicked when open, it will close.
+
+.sb-toggle-right can be used to toggle the right Slidebar. If clicked when the Slidebar is closed, it will open, if clicked when open, it will close.
+
+.sb-open-left can be used to open the left Slidebar when clicked.
+
+.sb-open-right can be used to open the right Slidebar when clicked.
+
+.sb-close can be used to close either Slidebar when clicked.
+
+## View Code
+
 And finaly the view should look like this:
 
 ```php
