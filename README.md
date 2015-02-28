@@ -50,6 +50,16 @@ use yii\helpers\Html;
     'id' => 'yourid'
 ]); ?>
 
+<?php yii\widgets\Block::begin(array('id'=>'sb-left')); ?>
+    <h4><i class="fa fa-tag"></i> <?= Html::encode('Search') ?></h4>
+    ...
+<?php yii\widgets\Block::end(); ?>
+
+<?php yii\widgets\Block::begin(array('id'=>'sb-right')); ?>
+    <h4><i class="fa fa-tag"></i> <?= Html::encode('Toolbox') ?></h4>
+    ...
+<?php yii\widgets\Block::end(); ?>
+
 ```
 
 Currently it cause issues with having multiple sly's on one page, but we know this issue and are working on it.
