@@ -8,7 +8,7 @@
  * @author Philipp Frenzel <philipp@frenzel.net>
  */
 
-namespace philippfrenzel\yii2slidebars;
+namespace yii2slidebars;
 
 use yii\helpers\Html;
 use yii\helpers\Json;
@@ -48,11 +48,11 @@ class yii2slidebars extends \yii\base\Widget
      */
     public function init()
     {
-        parent::init();
         //checks for the element id
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
-        }       
+        }
+        parent::init();
     }
 
     /**
@@ -68,10 +68,6 @@ class yii2slidebars extends \yii\base\Widget
                 {
                     echo $view->blocks['sb-left'];
                 }
-                else
-                {
-                    echo ' ';
-                }
             echo Html::endTag('div') . "\n";
         }
 
@@ -81,10 +77,6 @@ class yii2slidebars extends \yii\base\Widget
                 if (isset($view->blocks['sb-right']))
                 {
                     echo $view->blocks['sb-right'];
-                }
-                else
-                {
-                    echo ' ';
                 }
             echo Html::endTag('div') . "\n";
         }

@@ -4,20 +4,24 @@
  * @author Philipp Frenzel <philipp@frenzel.net> 
  */
 
-namespace philippfrenzel\yii2slidebars;
+namespace yii2slidebars;
 
 use yii\web\AssetBundle;
 
 class slidebarsAsset extends AssetBundle
 {
-    public $sourcePath = '@philippfrenzel/yii2slidebars/assets';
+    /**
+     * [$sourcePath description]
+     * @var string
+     */
+    public $sourcePath = '@bower/slidebars/distribution/0.10.2';
     
     public $css = [
-        'css/slidebars.css'
+        'slidebars.min.css'
     ];
 
     public $js = array(
-        'js/slidebars.js'
+        'slidebars.min.js'
     );
 
     public $depends = array(

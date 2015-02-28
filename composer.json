@@ -18,11 +18,16 @@
 	},
 	"minimum-stability": "dev",
 	"require": {
-		"yiisoft/yii2": "*"
+		"yiisoft/yii2": "*",
+		"yiisoft/yii2-jui": "*",
+		"bower-asset/slidebars" : "0.10.2"
+	},
+	"require-dev": {
+		"codeception/codeception": "*"
 	},
 	"autoload": {
 		"psr-4": {
-	    	"philippfrenzel\\yii2slidebars\\": ""
+	    	"yii2slidebars\\": ""
 	    }
 	}
 }
