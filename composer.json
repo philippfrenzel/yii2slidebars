@@ -20,7 +20,7 @@
 	"require": {
 		"yiisoft/yii2": "*",
 		"yiisoft/yii2-jui": "*",
-		"bower-asset/slidebars" : "*"
+		"bower-asset/slidebars" : "0.10.2"
 	},
 	"require-dev": {
 		"codeception/codeception": "*"
