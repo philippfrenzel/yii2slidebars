@@ -49,6 +49,12 @@ class yii2slidebars extends \yii\base\Widget
     public $sbStylePush = true;
 
     /**
+     * how much width should the sidebar use by opening
+     * @var string
+     */
+    public $sbWidth = '15%';
+
+    /**
      * initial options for the plugin, pls see docs for more details http://http://plugins.adchsm.me/slidebars/usage.php
      * @var [type]
      */
@@ -92,7 +98,7 @@ class yii2slidebars extends \yii\base\Widget
                 $CssClass .= ' sb-style-overlay';
             }
 
-            echo Html::beginTag('div', ['class' => $CssClass]) . "\n";
+            echo Html::beginTag('div', ['class' => $CssClass,'data-sb-width' => $this->sbWidth]) . "\n";
                 if (isset($view->blocks['sb-left']))
                 {
                     echo $view->blocks['sb-left'];
@@ -117,7 +123,7 @@ class yii2slidebars extends \yii\base\Widget
                 $CssClass .= ' sb-style-overlay';
             }
 
-            echo Html::beginTag('div', ['class' => $CssClass]) . "\n";
+            echo Html::beginTag('div', ['class' => $CssClass,'data-sb-width' => $this->sbWidth]) . "\n";
                 if (isset($view->blocks['sb-right']))
                 {
                     echo $view->blocks['sb-right'];
