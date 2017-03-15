@@ -14,7 +14,7 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\helpers\ArrayHelper;
 
-class yii2-slidebars extends \yii\base\Widget
+class yii2slidebars extends \yii\base\Widget
 {
     
     /**
