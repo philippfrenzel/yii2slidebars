@@ -1,8 +1,8 @@
 <?php
 
-namespace yii2-slidebars\tests\unit;
+namespace yii2slidebars\tests\unit;
 
-use \yii2-slidebars\yii2slidebars;
+use \yii2slidebars\yii2slidebars;
 
 /**
  * This is MasonryTest unit test.
