@@ -1,5 +1,5 @@
 {
-	"name": "philippfrenzel/yii2slidebars",
+	"name": "philippfrenzel/yii2-slidebars",
 	"description": "jquery slidebars extension for yii",
 	"keywords": ["yii2", "framework","slidebars","jquery"],
 	"homepage": "http://www.frenzel.net/",
@@ -27,7 +27,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-	    	"yii2-slidebars\\": ""
+	    	"yii2slidebars\\": ""
 	    }
 	}
 }
