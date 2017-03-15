@@ -13,6 +13,7 @@ namespace yii2slidebars;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\helpers\ArrayHelper;
+use yii\web\JsExpression;
 
 class yii2slidebars extends \yii\base\Widget
 {
@@ -58,7 +59,7 @@ class yii2slidebars extends \yii\base\Widget
      * initial options for the plugin, pls see docs for more details http://http://plugins.adchsm.me/slidebars/usage.php
      * @var [type]
      */
-    public $clientOptions = [];
+    public $initOptions = [];
 
     /**
      * Initializes the widget.
@@ -157,8 +158,9 @@ class yii2slidebars extends \yii\base\Widget
         slidebarsAsset::register($view);
         
         $js = [];
-        $options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
-        $js[] = "var mySlidebars$id = new $.slidebars($options);";
+        $options = empty($this->initOptions) ? '' : JsExpression($this->initOptions);
+        $js[] = "var controller$id = new slidebars();"; //var mySlidebars$id = new $.slidebars($options);
+        $js[] = "controller$id.init($options);";
         
         $view->registerJs(implode("\n", $js),\yii\web\View::POS_READY);
     }
