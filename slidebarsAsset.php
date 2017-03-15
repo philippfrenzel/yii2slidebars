@@ -4,7 +4,7 @@
  * @author Philipp Frenzel <philipp@frenzel.net> 
  */
 
-namespace yii2-slidebars;
+namespace yii2slidebars;
 
 use yii\web\AssetBundle;
 
@@ -20,11 +20,11 @@ class slidebarsAsset extends AssetBundle
         'slidebars.min.css'
     ];
 
-    public $js = array(
+    public $js = [
         'slidebars.min.js'
-    );
+    ];
 
-    public $depends = array(
+    public $depends = [
         'yii\web\JqueryAsset',
-    );
+    ];
 }
