@@ -12,11 +12,11 @@ A demo of the extension can be found here:
 
 http://yii2fullcalendar.beeye.org/index.php/site/slidebars
 
-[![Latest Stable Version](https://poser.pugx.org/philippfrenzel/yii2-slidebars/v/stable.svg)](https://packagist.org/packages/philippfrenzel/yii2-slidebars)
-[![Build Status](https://travis-ci.org/philippfrenzel/yii2slidebars.svg?branch=master)](https://travis-ci.org/philippfrenzel/yii2-slidebars)
-[![Code Climate](https://codeclimate.com/github/philippfrenzel/yii2-slidebars.png)](https://codeclimate.com/github/philippfrenzel/yii2-slidebars)
-[![Version Eye](https://www.versioneye.com/php/philippfrenzel:yii2-slidebars/badge.svg)](https://www.versioneye.com/php/philippfrenzel:yii2-slidebars)
-[![License](https://poser.pugx.org/philippfrenzel/yii2-slidebars/license.svg)](https://packagist.org/packages/philippfrenzel/yii2-slidebars)
+[![Latest Stable Version](https://poser.pugx.org/philippfrenzel/yii2-slidebars/v/stable.svg)](https://packagist.org/packages/philippfrenzel/yii2slidebars)
+[![Build Status](https://travis-ci.org/philippfrenzel/yii2slidebars.svg?branch=master)](https://travis-ci.org/philippfrenzel/yii2slidebars)
+[![Code Climate](https://codeclimate.com/github/philippfrenzel/yii2-slidebars.png)](https://codeclimate.com/github/philippfrenzel/yii2slidebars)
+[![Version Eye](https://www.versioneye.com/php/philippfrenzel:yii2slidebars/badge.svg)](https://www.versioneye.com/php/philippfrenzel:yii2slidebars)
+[![License](https://poser.pugx.org/philippfrenzel/yii2-slidebars/license.svg)](https://packagist.org/packages/philippfrenzel/yii2slidebars)
 
 Installation
 ============
@@ -61,7 +61,7 @@ use yii\helpers\Html;
 
 <h1><?php echo Html::encode($this->title); ?></h1>
 
-<?= \yii2slidebars\yii2-slidebars::widget([
+<?= \yii2-slidebars\yii2slidebars::widget([
     'id' => 'yourid'
 ]); ?>
 
