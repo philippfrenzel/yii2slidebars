@@ -31,8 +31,18 @@ Basic Steps
 
 These are the basic steps in order to get Slidebars working on your site. There are also more in-depth descriptions and API usage further down the page.
 
- + Add to your meta viewport tag to your head.
- + Wrap your entire page design in an element with id #sb-site.
+ + Add to your meta viewport tag to your head. 
+ 
+ ´´´
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ ´´´
+ 
+ + Wrap your entire page design in an element with id canvas='container'.
+ 
+ ´´´
+ <div canvas="container"></div>
+ ´´´
+ 
  + Set the side of your Slidebars by adding modifier classes.
  + Add control classes to elements to use the Slidebars.
 
