@@ -4,7 +4,7 @@
  * @author Philipp Frenzel <philipp@frenzel.net> 
  */
 
-namespace yii2slidebars;
+namespace yii2-slidebars;
 
 use yii\web\AssetBundle;
 
