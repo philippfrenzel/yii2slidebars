@@ -2,7 +2,7 @@
 
 namespace yii2-slidebars\tests\unit;
 
-use \yii2-slidebars\yii2-slidebars;
+use \yii2-slidebars\yii2slidebars;
 
 /**
  * This is MasonryTest unit test.
@@ -30,7 +30,7 @@ class SlidebarsTest extends \Codeception\TestCase\Test
      */
     protected function _before()
     {
-        $this->instance = new yii2-slidebars();
+        $this->instance = new yii2slidebars();
     }
 
     /**
