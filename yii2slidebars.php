@@ -8,7 +8,7 @@
  * @author Philipp Frenzel <philipp@frenzel.net>
  */
 
-namespace yii2-slidebars;
+namespace yii2slidebars;
 
 use yii\helpers\Html;
 use yii\helpers\Json;
