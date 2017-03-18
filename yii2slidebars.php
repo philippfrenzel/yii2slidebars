@@ -79,69 +79,6 @@ class yii2slidebars extends \yii\base\Widget
      */
     public function run()
     {
-        $view = $this->getView();
-        $CssClass = NULL;
-        
-        if($this->sbLeft)
-        {
-            $CssClass = 'sb-slidebar sb-left';
-            
-            if($this->sbStatic)
-            {
-                $CssClass .= ' sb-static';
-            }
-            if($this->sbStylePush)
-            {
-                $CssClass .= ' sb-style-push';                
-            }
-            else
-            {
-                $CssClass .= ' sb-style-overlay';
-            }
-
-            if(!is_null($this->sbWidth))
-            {
-                $CssClass .= ' sb-width-custom';
-            }
-
-            echo Html::beginTag('div', ['class' => $CssClass,is_NULL($this->sbWidth)?NULL:'data-sb-width' => $this->sbWidth]) . "\n";
-                if (isset($view->blocks['sb-left']))
-                {
-                    echo $view->blocks['sb-left'];
-                }
-            echo Html::endTag('div') . "\n";
-        }
-
-        if($this->sbRight)
-        {
-            $CssClass = 'sb-slidebar sb-right';
-            
-            if($this->sbStatic)
-            {
-                $CssClass .= ' sb-static';
-            }
-            if($this->sbStylePush)
-            {
-                $CssClass .= ' sb-style-push';                
-            }
-            else
-            {
-                $CssClass .= ' sb-style-overlay';
-            }
-
-            if(!is_null($this->sbWidth))
-            {
-                $CssClass .= ' sb-width-custom';
-            }
-
-            echo Html::beginTag('div', ['class' => $CssClass,is_NULL($this->sbWidth)?NULL:'data-sb-width' => $this->sbWidth]) . "\n";
-                if (isset($view->blocks['sb-right']))
-                {
-                    echo $view->blocks['sb-right'];
-                }
-            echo Html::endTag('div') . "\n";
-        }
-
         $this->registerPlugin();
     }
 
