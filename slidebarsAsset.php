@@ -17,7 +17,7 @@ class slidebarsAsset extends AssetBundle
     public $sourcePath = '@bower/slidebars/dist';
     
     public $css = [
-        'slidebars.min.css'
+        //'slidebars.min.css'
     ];
 
     public $js = [
