@@ -12,14 +12,14 @@
  * Box Model, Html & Body
  */
  
- html {
- 	  height: 100%;
- }
+html {
+  height: 100%;
+}
  
- body {
- 	  min-height: 100%;
- 	  overflow-y: hidden;
- }
+body {
+  min-height: 100%;
+  overflow-y: hidden;
+}
 
 html, body, [canvas=container], [off-canvas] {
 	margin: 0;
@@ -31,8 +31,7 @@ html, body, [canvas=container], [off-canvas] {
 
 html, body {
 	width: 100%;
-	height: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 /**
