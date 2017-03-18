@@ -93,6 +93,7 @@ class yii2slidebars extends \yii\base\Widget
         //get the displayed view and register the needed assets
         $view = $this->getView();
         slidebarsAsset::register($view);
+        slidebarsLocalAsset::register($view);
         
         $js = [];
         $options = empty($this->initOptions) ? '' : JsExpression($this->initOptions);
